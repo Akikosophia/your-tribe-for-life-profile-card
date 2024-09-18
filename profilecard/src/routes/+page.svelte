@@ -13,8 +13,9 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
+
 <main>
-  <h1>Squad 1D</h1>
+  <h1>Akiko Schermer</h1>
 
   <ul>
     {#each data.persons as person}
@@ -29,7 +30,6 @@
               <img src="https://robohash.org/mail@ashallendesign.co.uk" alt="Avatar van {person.name}">
             {/if}
           </span>
-
           {person.name}
         </a>
       </li>
@@ -37,6 +37,4 @@
   </ul>
 </main>
 
-<style>
 
-</style>
