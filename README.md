@@ -1,7 +1,7 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-Profilecard
+# Profilecard
+
 
 ## Inhoudsopgave
 
@@ -19,35 +19,35 @@ Profilecard
 
 ## Kenmerken
 
-HTML
-CSS
-JavaScript
-NodeJS
-Sveltekit
-Directus
+* HTML
+* CSS
+* JavaScript
+* NodeJS
+* Sveltekit
+*Directus
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
 ## Installatie
-Installeer NodeJs
-Fork/clone deze repository
-Open het in een code editor naar keuze
-Open de terminal en maak een nieuwe werkomgeving aan:
+* Installeer NodeJs
+* Fork/clone deze repository
+* Open het in een code editor naar keuze
+* Open de terminal en maak een nieuwe werkomgeving aan:
 # create a new project in the current directory
-npm create svelte@latest
+*npm create svelte@latest
 
 # create a new project in my-app
-npm create svelte@latest my-app
-Run de command npm install
-Run de command npm run dev
-Klik op de localhost link en begin met coden!
-
+* npm create svelte@latest my-app (my-app is optioneel dit kun je ook leeg laten)
+* Run de command npm install
+* Run de command npm run dev
+* Klik op de localhost link en begin met coden!
 
 ## Gebruik
 
 Klik op een van puntjes en zo kom je meer over mij te weten. 
 
 ## Bronnen
-
+https://docs.directus.io/blog/getting-started-directus-sveltekit.html
+https://learn.svelte.dev/tutorial/html-tags
 
 ## Licentie
 
