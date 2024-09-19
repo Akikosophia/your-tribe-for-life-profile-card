@@ -8,14 +8,7 @@ export async function load() {
   const persons = await fetchJson(url)
 
   console.log(persons.data)
-
-
-  // if (persons.data.length > 0) {
-  //   console.log("Naam:", persons.data[0].name);
-  //   console.log("Avatar:", persons.data[0].avatar);
-  // }
   
-
   return {
     persons: persons.data
   }
