@@ -38,127 +38,243 @@
   {#if error}
     <p>{error}</p>
   {:else if name && avatar}
-    <article class="profile-card">
-      <h1 class="profile-name">{name} {surname}</h1>
-      <img src={avatar} alt="Avatar van {name}" class="avatar" />
-      <p class="profile-info">
-        Hi, ik ben Akiko Schermer. Momenteel volg ik de opleiding frontend
-        design & development (HVA).
-      </p>
-      <button class="profile-btn">Get started</button>
+  <article class="profile-card">
+    <div class="slider">
+      <input type="radio" name="slider" id="slide1" checked />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+  
+      <div class="slides">
+        <!-- Slide 1: Avatar, Naam en Tekst -->
+        <div class="slide">
+          <div class="info">
+            <img src="{avatar}" alt="Avatar van {name}" class="avatar" />
+            <h1 class="profile-name">{name} {surname}</h1>
+            <p class="profile-info">
+              Hi, ik ben {name} {surname}. Momenteel volg ik de opleiding frontend design & development (HVA).
+            </p>
+          </div>
+        </div>
+  
+        <!-- Slide 2: Favoriete Liedje -->
+        <div class="slide">
+          <h1>Favoriete liedje</h1>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalxv7bk3CMPe_mgHfw5Ik6r-pLLX_AZjE9w&s"
+            alt="Favoriete liedje"
+            class="rectangle-image"
+          />
 
-      <div class="carousel-controls">
-        <input
-          type="radio"
-          name="carousel"
-          id="slide1"
-          class="carousel-radio"
-          checked
-        />
-        <input
-          type="radio"
-          name="carousel"
-          id="slide2"
-          class="carousel-radio"
-        />
-        <input
-          type="radio"
-          name="carousel"
-          id="slide3"
-          class="carousel-radio"
-        />
+          <div class="muziek-kaart">
+            <h2>Levels</h2>
+            <p class="artist">Avicii</p>  
+            </div>  
+
+            <!-- <div class="play-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="48px"
+                height="48px"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div> -->
+        </div>
+
+        
+        <!-- Slide 3: Favoriete Drankje -->
+        <div class="slide">
+          <img class="matcha"
+            src="https://coffeecopycat.com/wp-content/uploads/2023/04/IcedMatchaLatte1-1200x1600-1.jpg"
+            alt="Favoriete drankje"
+          />
+          <div class="info">
+            <h3>Favoriete drankje</h3>
+            <p>Ice matcha Latte met vanille</p>
+          </div>
+        </div>
       </div>
-    </article>
+  
+      <div class="navigation">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+      </div>
+    </div>
+  </article>
+  
   {:else}
     <p>Gegevens laden...</p>
   {/if}
 </main>
 
 <style>
-  main {
-    font-family: "Open Sans", sans-serif;
-    background-color: pink;
-  }
+main {
+  font-family: "Open Sans", sans-serif;
+}
 
-  .profile-card {
-    border-radius: 20px;
-    max-width: 285px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-  }
+h1.profile-name {
+  text-align: left;
+  margin: 10px 0;
+  font-size: 24px;
+  margin-left: 30px;
+}
 
-  .profile-name {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-  }
+h1 {
+  margin: 10px 0 8px; 
+  margin-top: 10px;
+}
 
-  .avatar {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
+.slide .info h3 {
+  margin: 10px 0 2px; 
+  font-size: 24px;
+}
 
-  .profile-info {
-    font-size: 16px;
-    color: black;
-    margin-bottom: 20px;
-  }
+.slide .info p {
+  margin: 2px 0; 
+  font-size: 16px;
+  color: #555;
+}
 
-  .profile-btn {
-    background-color: palevioletred;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.slide .muziek-kaart h2 {
+  margin: 10px 0 2px; 
+  font-size: 24px;
+}
 
-  .profile-btn:hover {
-    background-color: #0056b3;
-  }
+.slide .muziek-kaart p {
+  margin: 2px 0; 
+  font-size: 16px;
+  color: #555;
+}
 
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  img.avatar {
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+.profile-info {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0 20px;
+  margin-right: 18px;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 250px;
+}
 
-  .carousel-controls {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 285px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .carousel-radio {
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-  }
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 300%;
+}
 
-  .carousel-radio:checked {
-    background-color: palevioletred;
-  }
+.slide {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20px;
+ background: linear-gradient(135deg, #ffffff 0%, #fbc2eb 50%, #ffffff 100%);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  min-height: 520px;
+  box-sizing: border-box;
+}
 
-  a {
-    text-decoration: none;
-  }
+
+
+
+.slide img.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.slide .rectangle-image {
+  width: 240px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.slide img.matcha{
+   margin-right: 5px;
+   height: 340px;
+   width: 290px;
+   object-fit: cover;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.navigation label {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: palevioletred;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+input#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+input#slide2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+input#slide1:checked ~ .navigation label[for="slide1"],
+input#slide2:checked ~ .navigation label[for="slide2"],
+input#slide3:checked ~ .navigation label[for="slide3"] {
+  background-color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .play-button svg {
+  margin-top: 10px;
+  fill: black;
+  width: 30px;
+  height: 30px;
+}
+
+.play-button:hover {
+  background-color: #e59400;
+  transform: scale(1.1);
+} */
+
 </style>
