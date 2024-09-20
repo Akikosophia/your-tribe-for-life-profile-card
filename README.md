@@ -13,6 +13,7 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
+Als je op een van de onderste buttons klikt zie je de volgende kaartjes. 
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
@@ -42,8 +43,7 @@
 * Klik op de localhost link en begin met coden!
 
 ## Gebruik
-
-Klik op een van puntjes en zo kom je meer over mij te weten. 
+Als je op een van de onderste buttons klikt zie je de volgende kaartjes
 
 ## Bronnen
 https://docs.directus.io/blog/getting-started-directus-sveltekit.html
