@@ -17,9 +17,7 @@ Als je op een van de onderste buttons klikt zie je de volgende kaartjes.
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
-[Alt text](https://github.com/user-attachments/assets/c7495d0b-c3f6-4ed8-99dd-23a17790702b
-
-
+<img width="378" alt="Scherm­afbeelding 2024-05-29 om 14 48 27" src="https://github.com/user-attachments/assets/c7495d0b-c3f6-4ed8-99dd-23a17790702b">
 
 ## Kenmerken
 
