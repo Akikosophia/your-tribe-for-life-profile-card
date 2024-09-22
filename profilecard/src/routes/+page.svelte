@@ -39,25 +39,23 @@
     <p>{error}</p>
   {:else if name && avatar}
   <article class="profile-card">
-    <div class="slider">
+    <form class="slider">
       <input type="radio" name="slider" id="slide1" checked />
       <input type="radio" name="slider" id="slide2" />
       <input type="radio" name="slider" id="slide3" />
   
-      <div class="slides">
-        <!-- Slide 1: Avatar, Naam en Tekst -->
-        <div class="slide">
-          <div class="info">
+      <article class="slides">
+        <section class="slide">
+          <header class="info">
             <img src="{avatar}" alt="Avatar van {name}" class="avatar" />
             <h1 class="profile-name">{name} {surname}</h1>
             <p class="profile-info">
               Hi, ik ben {name} {surname}. Momenteel volg ik de opleiding frontend design & development (HVA).
             </p>
-          </div>
-        </div>
+          </header>
+        </section>
   
-        <!-- Slide 2: Favoriete Liedje -->
-        <div class="slide">
+        <section class="slide">
           <h1>Favoriete liedje</h1>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalxv7bk3CMPe_mgHfw5Ik6r-pLLX_AZjE9w&s"
@@ -65,44 +63,30 @@
             class="rectangle-image"
           />
 
-          <div class="muziek-kaart">
+          <article class="muziek-kaart">
             <h2>Levels</h2>
             <p class="artist">Avicii</p>  
-            </div>  
+          </article>  
+        </section>
 
-            <!-- <div class="play-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                width="48px"
-                height="48px"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div> -->
-        </div>
-
-        
-        <!-- Slide 3: Favoriete Drankje -->
-        <div class="slide">
+        <section class="slide">
           <img class="matcha"
             src="https://coffeecopycat.com/wp-content/uploads/2023/04/IcedMatchaLatte1-1200x1600-1.jpg"
             alt="Favoriete drankje"
           />
-          <div class="info">
+          <footer class="info">
             <h3>Favoriete drankje</h3>
             <p>Ice matcha Latte met vanille</p>
-          </div>
-        </div>
-      </div>
+          </footer>
+        </section>
+      </article>
   
-      <div class="navigation">
+      <nav class="navigation">
         <label for="slide1"></label>
         <label for="slide2"></label>
         <label for="slide3"></label>
-      </div>
-    </div>
+      </nav>
+    </form>
   </article>
   
   {:else}
@@ -111,6 +95,7 @@
 </main>
 
 <style>
+
 main {
   font-family: "Open Sans", sans-serif;
 }
@@ -125,6 +110,7 @@ h1.profile-name {
 h1 {
   margin: 10px 0 8px; 
   margin-top: 10px;
+  letter-spacing: 1px;
 }
 
 .slide .info h3 {
@@ -148,7 +134,6 @@ h1 {
   font-size: 16px;
   color: #555;
 }
-
 
 .profile-info {
   text-align: center;
@@ -185,16 +170,13 @@ h1 {
   align-items: flex-start;
   text-align: left;
   padding: 20px;
- background: linear-gradient(135deg, #ffffff 0%, #fbc2eb 50%, #ffffff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fbc2eb 50%, #ffffff 100%);
   position: relative;
   z-index: 1;
   height: 100%;
   min-height: 520px;
   box-sizing: border-box;
 }
-
-
-
 
 .slide img.avatar {
   width: 150px;
@@ -261,10 +243,6 @@ input#slide3:checked ~ .navigation label[for="slide3"] {
   background-color: #333;
 }
 
-a {
-  text-decoration: none;
-}
-
 /* .play-button svg {
   margin-top: 10px;
   fill: black;
@@ -276,5 +254,4 @@ a {
   background-color: #e59400;
   transform: scale(1.1);
 } */
-
 </style>
