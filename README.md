@@ -34,6 +34,7 @@ Als je op een van de onderste buttons klikt zie je de volgende kaartjes.
 * Fork/clone deze repository
 * Open het in een code editor naar keuze
 * Open de terminal en maak een nieuwe werkomgeving aan:
+  
 # create a new project in the current directory
 *npm create svelte@latest
 
